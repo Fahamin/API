@@ -41,6 +41,7 @@ public class StringRootACT extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         textView = findViewById(R.id.textnewId);
         FloatingActionButton fab = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +61,9 @@ public class StringRootACT extends AppCompatActivity {
 
     private void getData() {
 
-        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest objectRequest = new JsonObjectRequest(
+                Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
